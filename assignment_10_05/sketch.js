@@ -1,3 +1,4 @@
+// Partner: Erich Chu
 function setup() {
 	// create greyish 800 by 800 canvas
   	createCanvas(800, 800);
