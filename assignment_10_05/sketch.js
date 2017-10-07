@@ -7,8 +7,6 @@ function setup() {
 function drawHex( x, y, len, shapeColor) {
 	// color the hexagon
 	fill(shapeColor);
-
-	// 
 	beginShape();
 	vertex(x - len, y - sqrt(3) * len);
 	vertex(x + len, y - sqrt(3) * len);
