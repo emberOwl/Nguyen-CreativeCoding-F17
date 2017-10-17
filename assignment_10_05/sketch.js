@@ -1,3 +1,4 @@
+// Partner: Erich Chu
 function setup() {
 	// create greyish 800 by 800 canvas
   	createCanvas(800, 800);
@@ -7,8 +8,6 @@ function setup() {
 function drawHex( x, y, len, shapeColor) {
 	// color the hexagon
 	fill(shapeColor);
-
-	// 
 	beginShape();
 	vertex(x - len, y - sqrt(3) * len);
 	vertex(x + len, y - sqrt(3) * len);
