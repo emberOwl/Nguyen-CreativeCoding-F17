@@ -4,9 +4,11 @@ var counter = 0;
 var page = 0;
 var color_num = 0;
 var mail;
+var font;
 
 function preload() {
 	mail = loadSound("assets/youGotMail.mp3");
+	font = loadFont("assets/Georgia.ttf");
 }
 
 function setup() {
@@ -28,12 +30,11 @@ function loadData() {
 
 function displayData(data) {
 	
-	//text(, 10, 60);
 	for (var i = 0; i < data['response']['docs'].length; i++) {
 		textSize(Math.floor((Math.random() * 50) + 1));
 		fill((255 - color_num) % 256, (255 - color_num) % 256, (255 - color_num) % 256, 240);
+		textFont(font);
 		text(data['response']['docs'][i]['headline']['main'], Math.floor((Math.random() * windowWidth) + 1), Math.floor((Math.random() * windowHeight) + 1));
-		
 	}
 	mail.play();
 	color_num += 30;
